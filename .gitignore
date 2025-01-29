@@ -18,6 +18,8 @@ target/
 *.iws
 *.iml
 *.ipr
+/Backend/src/main/resources/application.properties
+/Backend/src/main/resources/db.properties
 
 ### NetBeans ###
 /nbproject/private/
@@ -31,3 +33,9 @@ build/
 
 ### VS Code ###
 .vscode/
+
+
+### Git ###
+.gitignore
+
+
