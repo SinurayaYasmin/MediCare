@@ -1,14 +1,16 @@
 package com.project.MediCare.Controller;
 
-import com.fasterxml.jackson.databind.ser.Serializers;
 import com.project.MediCare.BaseResponse;
-import com.project.MediCare.MainApplication;
 import com.project.MediCare.Model.DAO.AccountDAO;
 import com.project.MediCare.Model.Entity.Account;
-import org.springframework.http.HttpStatus;
+import com.project.MediCare.Model.Entity.Cart;
+import com.project.MediCare.Model.Entity.Order;
+import com.project.MediCare.Model.Entity.Recipe;
+import com.project.MediCare.Model.Enum.OrderStatus;
 import org.springframework.web.bind.annotation.*;
 
-import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.UUID;
 
 @RestController
@@ -92,5 +94,33 @@ public class AccountController {
             return new BaseResponse<>(false, "Top Up Failed");
         }
     }
+
+
+
+    @GetMapping("/orderHistory")
+    public BaseResponse<ArrayList<Order>> orderHistory(@RequestParam(name = "userID") UUID accountID){
+        ArrayList<Order> o = accountDao.orderHistory(accountID);
+
+        if (o != null){
+            return new BaseResponse<>(true, "Get Order History Success", o);
+        }
+        else {
+            return new BaseResponse<>(false, "Get Order History Failed");
+        }
+    }
+
+    @GetMapping("/recipeHistory")
+    public BaseResponse<ArrayList<Recipe>> recipeHistory(@RequestParam(name = "userID") UUID accountID){
+        ArrayList<Recipe> r = accountDao.recipeHistory(accountID);
+
+        if (r != null){
+            return new BaseResponse<>(true, "Get Recipe History Success", r);
+        }
+        else {
+            return new BaseResponse<>(false, "Get Recipe History Failed");
+        }
+    }
+
+
 
 }

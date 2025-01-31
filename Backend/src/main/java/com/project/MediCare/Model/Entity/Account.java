@@ -17,11 +17,12 @@ Account Functions:
 5. top up (DONE)
 6. Get account by id (DONE)
 7. Notifications
-8. Show Cart
-9. Order History
+8. Show Cart (DONE)
+9. Order History (DONE)
 10. Chat History
-11. Change Password -- Same as Forgot Password (DONE)
-12. Log out
+11. Recipe History (CONE)
+12. Change Password -- Same as Forgot Password (DONE)
+13. Log out
  */
 public class Account {
 

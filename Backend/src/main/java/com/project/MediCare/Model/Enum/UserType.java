@@ -1,4 +1,4 @@
-package com.project.MediCare.Model.Entity;
+package com.project.MediCare.Model.Enum;
 
 public enum UserType {
     Patient,

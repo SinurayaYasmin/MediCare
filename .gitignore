@@ -18,8 +18,8 @@ target/
 *.iws
 *.iml
 *.ipr
-/Backend/src/main/resources/application.properties
-/Backend/src/main/resources/db.properties
+Backend/src/main/resources/application.properties
+Backend/src/main/resources/db.properties
 
 ### NetBeans ###
 /nbproject/private/
@@ -36,6 +36,6 @@ build/
 
 
 ### Git ###
-.gitignore
+
 
 
